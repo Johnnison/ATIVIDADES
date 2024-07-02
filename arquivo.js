@@ -69,10 +69,63 @@ console.log(`O valor de c é ${c}`);
 // variável por let?
 
 for (var contador = 0; contador < 5; contador++) {
-    // Alguma lógica aqui
+    // alguma lógica aqui
+}
+console.log(contador);
+
+// O var faz com que a variável contador exista fora do loop
+//Após o loop, contador será 5
+//Saída: 5
+
+// Se usar o let faz com que a variável contador exista dentro do loop.
+//Fora do loop, contador aparece que não existe.
+
+
+//QUESTÃO 9: Faça um algoritmo que receba um número inteiro e imprima na tela o seu
+//antecessor e o seu sucessor.
+
+let Numero = 5;
+console.log(`Antecessor: ${Numero - 1}, Sucessor: ${Numero + 1}`);
+
+
+
+//QUESTÃO 10: Qual será a saída do seguinte código? Escreva e execute.
+
+var x = 10;
+
+function  minhaFuncao() {
+
+var y = 5;
+console.log(x + y);
 
 }
 
-console.log(contador;)
+minhaFuncao();
+
+// A saída do código mostra o numero 15
+
+
+//QUESTÃO 11: Qual será a saída do seguinte código? Escreva e execute.
+
+var numero = "5";
+if (numero === 5) {
+    console.log("O número é igual a 5.");
+} else if (numero == 5) {
+    console.log("O número é igual a 5, com conversão de tipo");
+} else {
+    console.log("O número não é igual a 5");
+}
+
+// Mostra que o número igual a 5, com conversão de tipo
+
+
+
+
+
+
+
+
+
+
 
 
