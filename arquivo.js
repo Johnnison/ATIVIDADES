@@ -9,6 +9,7 @@ console.log(20);
 // QUESTÃO 2:Crie um array de itens, itere sobre eles e os exiba no console.
 
 let itens = ['notebook', 'computador', 'teclado'];
+
 itens.forEach(item => {
     console.log(item);
 });
@@ -16,7 +17,7 @@ itens.forEach(item => {
 // QUESTÃO 3:Como acessar o terceiro elemento da lista?
 
 let lista = ['video game', 'bicicleta', 'bola', 'camisa'];
-console.log(lista[3]); 
+console.log(lista[2]); 
 
 //QUESTÃO 4:Crie uma função que calcule a área do quadrado em metros.
 
@@ -25,7 +26,7 @@ function calculaAreaQuadrado(lado) {
     console.log(`A área de um quadrado de lado ${lado} é ${area}m²`);
 }
 
-calculaAreaQuadrado(2);
+calculaAreaQuadrado(2); 
 
 //QUESTÃO 5:Faça um algoritmo que leia os valores de A, B, C e imprima a soma entre A e B e mostre se a soma é menor que C.
 
@@ -117,6 +118,40 @@ if (numero === 5) {
 }
 
 // Mostra que o número igual a 5, com conversão de tipo
+
+
+//QUESTÃO 12: Crie um programa que receba o seguinte array [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], e
+//imprime um novo array apenas com os números pares. Dicas:
+//a. ler array pode ser feito de forma fácil com forEach, mas isso pode ser
+//feito com for também.
+//b. exemplo de saída esperada:
+//i. [2, 4, 6, 8, 10]
+
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let numerosPares = []; 
+
+numeros.forEach(numero => { 
+    if (numero % 2 === 0) { 
+        numerosPares.push(numero); 
+    }
+});
+
+console.log(numerosPares); 
+
+
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Array inicial
+let numerosPares = []; // Novo array para armazenar números pares
+
+for (let i = 0; i < numeros.length; i++) { // Para cada índice no array 'numeros'
+    if (numeros[i] % 2 === 0) { // Se o número no índice 'i' for par
+        numerosPares.push(numeros[i]); // Adiciona ao novo array 'numerosPares'
+    }
+}
+
+console.log(numerosPares); // Imprime o novo array com números pares
+
+// parei aque 
+
 
 
 
