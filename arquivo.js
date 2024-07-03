@@ -138,19 +138,147 @@ numeros.forEach(numero => {
 
 console.log(numerosPares); 
 
+// foi exibido no console a sequencia de saída 2, 4, 6, 8, 10.
 
-let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Array inicial
-let numerosPares = []; // Novo array para armazenar números pares
 
-for (let i = 0; i < numeros.length; i++) { // Para cada índice no array 'numeros'
-    if (numeros[i] % 2 === 0) { // Se o número no índice 'i' for par
-        numerosPares.push(numeros[i]); // Adiciona ao novo array 'numerosPares'
+let Numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let NumerosPares = []; 
+
+for (let i = 0; i < Numeros.length; i++) { 
+    if (Numeros[i] % 2 === 0) { 
+        NumerosPares.push(Numeros[i]); 
     }
 }
 
-console.log(numerosPares); // Imprime o novo array com números pares
+console.log(NumerosPares); 
 
-// parei aque 
+
+// foi exibido no console a sequencia de saída 2, 4, 6, 8, 10.
+
+
+//QUESTÃO 13: Crie um programa que:
+//13.Crie um programa que:
+//a. Tenha uma função que recebe 3 parâmetros (notas) e retorne a média;
+//b. Avalie a média recebida e exibe a média junto com a situação no
+//console de acordo com as regras abaixo:
+//i. 7 ou maior = aprovado;
+//ii. 5 a 7 = recuperação;
+//iii. menor que 5 = reprovado.
+//c. exemplo de saída esperada:
+//i. “Média 8.5, resultado: Aprovado”.
+//d. Faça o fluxograma.
+
+
+// Função para calcular média e avaliar situação
+function calcularMedia(nota1, nota2, nota3) {
+    // Calcular média das notas
+    let media = (nota1 + nota2 + nota3) / 3;
+    let situacao;
+
+    // Avaliar a média e determinar a situação do aluno
+    if (media >= 7) {
+        situacao = "Aprovado";
+    } else if (media >= 5) {
+        situacao = "Recuperação";
+    } else {
+        situacao = "Reprovado";
+    }
+
+    // Retornar a média e situação
+    return `Média ${media.toFixed(1)}, resultado: ${situacao}`;
+}
+
+// Exemplo de uso:
+let resultado = calcularMedia(8, 7, 9);
+console.log(resultado); // Saída esperada: "Média 8.0, resultado: Aprovado"
+
+// ---------------------------------------//
+//FLUXOGRAMA                               
+
+//INICIO: E: nota1, nota2, nota3
+
+//vai para
+
+//C: média = (nota1 + nota2 + nota3) /3 
+
+//vai para
+
+//D: se media >= 7
+
+//vai para
+
+// s: "APROVADO"
+
+// vai para 
+
+// D: else if, media >= 5
+
+//s: "RECUPERAÇÃO"
+
+//vai para 
+
+//D: else
+
+//vai para
+
+//s: "REPROVADO"
+
+//vai para
+
+//FIM
+
+//---------------------------------------//
+
+
+//QUESTÃO 14:Crie um programa que calcule o IMC e exiba na tela junto com a situação. O
+//Índice de Massa Corpórea (IMC) é um valor calculado baseado na altura e no
+//peso de uma pessoa. De acordo com o valor do IMC, podemos classificar o
+//indivíduo dentro de certas faixas. O IMC é calculado pela expressão
+//peso/altura2 (peso dividido pelo quadrado da altura)
+
+//a. abaixo de 18.5: Abaixo do peso
+//b. entre 18.5 e 25: Peso ideal
+//c. entre 25 e 30: Sobrepeso
+//d. entre 30 e 40: Obesidade
+//e. acima de 40: Obesidade mórbida
+//f. exemplo de saída esperada:
+//i. “Seu IMC é 23, resultado: Peso Ideal”
+
+// Função para calcular IMC e exibir situação
+function calcularIMC(peso, altura) {
+    // Calcular IMC
+    let imc = peso / (altura * altura);
+    let situacao;
+
+    // Determinar a situação com base no IMC calculado
+    if (imc < 18.5) {
+        situacao = "Abaixo do peso";
+    } else if (imc >= 18.5 && imc < 25) {
+        situacao = "Peso ideal";
+    } else if (imc >= 25 && imc < 30) {
+        situacao = "Sobrepeso";
+    } else if (imc >= 30 && imc < 40) {
+        situacao = "Obesidade";
+    } else {
+        situacao = "Obesidade mórbida";
+    }
+
+    // Exibir resultado no console
+    console.log(`Seu IMC é ${imc.toFixed(1)}, resultado: ${situacao}`);
+}
+
+// Exemplo de uso:
+calcularIMC(70, 1.75);
+
+
+
+
+                                                                                                                     
+
+
+
+
+
 
 
 
