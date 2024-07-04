@@ -17,7 +17,7 @@ itens.forEach(item => {
 // QUESTÃO 3:Como acessar o terceiro elemento da lista?
 
 let lista = ['video game', 'bicicleta', 'bola', 'camisa'];
-console.log(lista[2]); 
+console.log(lista[2]);
 
 //QUESTÃO 4:Crie uma função que calcule a área do quadrado em metros.
 
@@ -26,7 +26,7 @@ function calculaAreaQuadrado(lado) {
     console.log(`A área de um quadrado de lado ${lado} é ${area}m²`);
 }
 
-calculaAreaQuadrado(2); 
+calculaAreaQuadrado(2);
 
 //QUESTÃO 5:Faça um algoritmo que leia os valores de A, B, C e imprima a soma entre A e B e mostre se a soma é menor que C.
 
@@ -62,7 +62,7 @@ let c;
 if (a === b) {
     c = a + b;
 } else {
-    c =a * b;
+    c = a * b;
 }
 console.log(`O valor de c é ${c}`);
 
@@ -94,10 +94,10 @@ console.log(`Antecessor: ${Numero - 1}, Sucessor: ${Numero + 1}`);
 
 var x = 10;
 
-function  minhaFuncao() {
+function minhaFuncao() {
 
-var y = 5;
-console.log(x + y);
+    var y = 5;
+    console.log(x + y);
 
 }
 
@@ -128,29 +128,29 @@ if (numero === 5) {
 //i. [2, 4, 6, 8, 10]
 
 let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let numerosPares = []; 
+let numerosPares = [];
 
-numeros.forEach(numero => { 
-    if (numero % 2 === 0) { 
-        numerosPares.push(numero); 
+numeros.forEach(numero => {
+    if (numero % 2 === 0) {
+        numerosPares.push(numero);
     }
 });
 
-console.log(numerosPares); 
+console.log(numerosPares);
 
 // foi exibido no console a sequencia de saída 2, 4, 6, 8, 10.
 
 
 let Numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let NumerosPares = []; 
+let NumerosPares = [];
 
-for (let i = 0; i < Numeros.length; i++) { 
-    if (Numeros[i] % 2 === 0) { 
-        NumerosPares.push(Numeros[i]); 
+for (let i = 0; i < Numeros.length; i++) {
+    if (Numeros[i] % 2 === 0) {
+        NumerosPares.push(Numeros[i]);
     }
 }
 
-console.log(NumerosPares); 
+console.log(NumerosPares);
 
 
 // foi exibido no console a sequencia de saída 2, 4, 6, 8, 10.
@@ -169,13 +169,13 @@ console.log(NumerosPares);
 //d. Faça o fluxograma.
 
 
-// Função para calcular média e avaliar situação
+
 function calcularMedia(nota1, nota2, nota3) {
-    // Calcular média das notas
+
     let media = (nota1 + nota2 + nota3) / 3;
     let situacao;
 
-    // Avaliar a média e determinar a situação do aluno
+
     if (media >= 7) {
         situacao = "Aprovado";
     } else if (media >= 5) {
@@ -184,11 +184,11 @@ function calcularMedia(nota1, nota2, nota3) {
         situacao = "Reprovado";
     }
 
-    // Retornar a média e situação
+
     return `Média ${media.toFixed(1)}, resultado: ${situacao}`;
 }
 
-// Exemplo de uso:
+
 let resultado = calcularMedia(8, 7, 9);
 console.log(resultado); // Saída esperada: "Média 8.0, resultado: Aprovado"
 
@@ -197,35 +197,35 @@ console.log(resultado); // Saída esperada: "Média 8.0, resultado: Aprovado"
 
 //INICIO: E: nota1, nota2, nota3
 
-//vai para
+//em seguida
 
 //C: média = (nota1 + nota2 + nota3) /3 
 
-//vai para
+//em seguida
 
 //D: se media >= 7
 
-//vai para
+//em seguida
 
 // s: "APROVADO"
 
-// vai para 
+// em seguida
 
 // D: else if, media >= 5
 
 //s: "RECUPERAÇÃO"
 
-//vai para 
+//em seguida
 
 //D: else
 
-//vai para
+//em seguida
 
 //s: "REPROVADO"
 
-//vai para
+//em seguida
 
-//FIM
+//FINAL
 
 //---------------------------------------//
 
@@ -253,11 +253,11 @@ function calcularIMC(peso, altura) {
     // Determinar a situação com base no IMC calculado
     if (imc < 18.5) {
         situacao = "Abaixo do peso";
-    } else if (imc >= 18.5 && imc < 25) {
+    } else if (imc >= 35.90 && imc < 58) {
         situacao = "Peso ideal";
-    } else if (imc >= 25 && imc < 30) {
+    } else if (imc >= 60 && imc < 80) {
         situacao = "Sobrepeso";
-    } else if (imc >= 30 && imc < 40) {
+    } else if (imc >= 90 && imc < 180) {
         situacao = "Obesidade";
     } else {
         situacao = "Obesidade mórbida";
@@ -268,12 +268,74 @@ function calcularIMC(peso, altura) {
 }
 
 // Exemplo de uso:
-calcularIMC(70, 1.75);
+calcularIMC(50, 1.75);
+
+
+//QUESTÃO 15: 15.Escreva um programa que leia um número qualquer e mostre a tabuada
+//desse número, usando a estrutura “for”.
+//a. exemplo de saída para a entrada de número 8:
+//i. 8 x 1 = 8
+//ii. 8 x 2 = 16
+//iii. 8 x 3 = 24
+//iv. ...
+//v. 8 x 10 = 80
+//b. Faça o fluxograma.
+
+
+function mostrarTabuada(numero) {
+
+    for (let i = 1; i <= 10; i++) {
+
+        console.log(`${numero} x ${i} = ${numero * i}`);
+    }
+}
+
+
+let numero = 8;
+mostrarTabuada(numero);
+
+//--------------------------------------------------------------------------
+//FLUXOGRAMA:
+
+// INICIO
+// em seguida
+// LER NUMERO
+// em seguida
+//INICIALIZAR i = 1
+// em seguida
+// MULTIPLICAR NUMERO POR i
+// em seguida
+// EXIBIR RESULTADO
+// em seguida
+// INCREMENTAR i
+// em seguida
+// [i <= 10?] -- Sim --> [Voltar para "Multiplicar número por i"]
+// Se i for maior que 10, o loop termina.
+// FINAL
+//--------------------------------------------------------------------------
+
+// QUESTÃO 16: Interprete o diagrama a seguir e crie seu código
+
+function calcularDivisao(n1, n2) {
+    if (n2 === 0) {
+        throw new Error("Divisão por zero não é permitida.");
+    }
+    console.log(`O resultado de ${n1} / ${n2} é ${n1 / n2}`);
+}
+
+
+try {
+    let n1 = 10; // Altere para testar
+    let n2 = 0;  // Altere para testar
+    calcularDivisao(n1, n2);
+} catch (error) {
+    console.error(error.message);
+}
 
 
 
 
-                                                                                                                     
+
 
 
 
